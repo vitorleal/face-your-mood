@@ -1,0 +1,27 @@
+body { margin: 0; }
+video { width: 100%; height: 100%; }
+canvas {
+  border: 4px solid rgba(255, 255, 255, .6);
+  position: absolute; top: -100%; left: 0;
+  opacity: 0;
+  transition: top .8s, opacity 1.8s;
+}
+
+.take-photo {
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  border: solid 4px rgba(255, 0, 0, .6);
+  cursor: pointer;
+  margin-left: -50px;
+  position: absolute; bottom: 10%; left: 50%;
+  width: 100px; height: 100px;
+  transition: background .5s;
+}
+.take-photo:hover {
+  background: rgb(255, 0, 0);
+}
+
+.show {
+  top: 0;
+  opacity: 1;
+}
