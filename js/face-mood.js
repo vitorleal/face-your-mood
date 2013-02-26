@@ -1,5 +1,8 @@
 (function () {
-  navigator.getMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator
+  navigator.getMedia = (navigator.getUserMedia ||
+                        navigator.webkitGetUserMedia ||
+                        navigator.mozGetUserMedia ||
+                        navigator.msGetUserMedia);
 
   function faceMood() {
     var canvas = document.getElementById('canvas');
