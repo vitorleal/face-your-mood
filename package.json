@@ -1,0 +1,10 @@
+{
+  "name": "face-mood",
+  "author": "Vitor Leal <vitorleal1@gmail.com> - @vitorleal",
+  "version": "0.0.5",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-uglify": "*"
+  }
+}
