@@ -6,10 +6,10 @@
 
   function faceMood() {
     var canvas = document.getElementById('canvas');
-    navigator.getMedia ({ video: true }, faceMood.showMedia, function(err) { console.log(err); });
+    navigator.getMedia({ video: true }, this.showMedia, function(err) { console.log(err); });
   }
 
-  faceMood.showMedia = function (stream) {
+  faceMood.prototype.showMedia = function (stream) {
     var video  = document.getElementById('video'),
         button = document.querySelector('.take-photo');
 
@@ -17,7 +17,7 @@
     button.addEventListener('click', function () { faceMood.snapShot(video) }, false);
   }
 
-  faceMood.snapShot = function (video) {
+  faceMood.prototype.snapShot = function (video) {
     var w = video.videoWidth/2,
         h = video.videoHeight/2;
 
@@ -27,9 +27,9 @@
     canvas.classList.add('show');
   }
 
-  faceMood.pause = function (video) {
+  faceMood.prototype.pause = function (video) {
     video.pause();
   }
 
-  faceMood();
+  camera = new faceMood();
 })();
